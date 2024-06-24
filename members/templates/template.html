@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing</title>
+</head>
+<body>
+    <span>Variable</span>
+    {{ pipol }}
+
+    <hr><span>Direct variable using With</span>
+    {% with pipol="Jerome" %}
+        <p>with: {{ pipol }}</p>
+    {% endwith %}
+
+    <hr>
+    <span>For loop</span>
+    {% for x in fruits %}
+        <p>{{ x }}</p>
+    {% endfor %}
+
+    <hr>
+    <span>If else</span>
+    {% if fruits.length < 1 %}
+        <p>No fruits</p>
+    {% else %}
+        <p>There are fruits</p>
+    {% endif %}
+
+    {% include 'footer.html' %}
+</body>
+</html>
